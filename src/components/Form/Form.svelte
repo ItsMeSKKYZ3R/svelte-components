@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "./Button.svelte";
+	import Button from "../Button/Button.svelte";
 
 	export let method: "post" | "get";
 	export let action: string;
@@ -15,7 +15,7 @@
 	<label for="message">Message :</label><br>
 	<textarea id="message" name="message" rows="4" cols="50" required /><br><br>
 
-	<Button type="submit" text="Envoyer" style="modern" />
+	<Button text="Envoyer" style="round" />
 </form>
 
 <style>
