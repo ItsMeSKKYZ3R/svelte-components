@@ -11,7 +11,7 @@
     button {
         border: none;
     }
-    .modern {
+    :global(.modern) {
         color: red;
     }
 </style>
