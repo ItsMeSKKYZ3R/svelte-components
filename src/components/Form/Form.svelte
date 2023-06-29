@@ -3,9 +3,12 @@
 
 	export let method: "post" | "get";
 	export let action: string;
+	export let classes: string = "";
+	export let style: string = "";
+	export let color: "dark" | "light" = "light";
 </script>
 
-<form {method} {action}>
+<form {method} {action} class={classes} {style} id={color}>
 	<label for="nom">Nom :</label>
 	<input type="text" id="nom" name="nom" required /><br><br>
 
@@ -19,23 +22,23 @@
 </form>
 
 <style>
-	form {
+	form#light {
 		background-color: #ffffff;
 		padding: 20px;
 		border-radius: 5px;
 		padding-right: 40px;
 	}
 
-	label {
+	form#light label {
 		display: block;
 		margin-bottom: 10px;
 		font-weight: bold;
 		color: #555555;
 	}
 
-	input[type="text"],
-	input[type="email"],
-	textarea {
+	form#light input[type="text"],
+	form#light input[type="email"],
+	form#light textarea {
 		width: 100%;
 		padding: 10px;
 		border: 1px solid #dddddd;
@@ -49,7 +52,53 @@
 		resize: vertical;
 	}
 
-	:global(button[type="submit"]) {
+	:global(form#light button[type="submit"]) {
+		color: #ffffff;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+		transition: all 0.2s ease-in-out;
+	}
+
+	:global(button[type="submit"]:hover) {
+		background: #0b4efd;
+	}
+
+	/* */
+
+	form#dark {
+		background-color: #333;
+		padding: 20px;
+		border-radius: 5px;
+		padding-right: 40px;
+	}
+
+	form#dark label {
+		display: block;
+		margin-bottom: 10px;
+		font-weight: bold;
+		color: #ccc;
+	}
+
+	form#dark input[type="text"],
+	form#dark input[type="email"],
+	form#dark textarea {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #dddddd;
+		border-radius: 5px;
+		font-size: 14px;
+		color: #555555;
+		margin-bottom: 20px;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	:global(form#dark button[type="submit"]) {
 		color: #ffffff;
 		border: none;
 		padding: 10px 20px;
