@@ -1,4 +1,4 @@
-# Svelte Component/Button.svelte
+# Svelte Components/Button.svelte (v1.0)
 ### Here is a presentation of the button and a preview.
 
 ```html

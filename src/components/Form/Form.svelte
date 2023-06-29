@@ -9,36 +9,27 @@
 </script>
 
 <form {method} {action} class={classes} {style} id={color}>
-	<label for="nom">Nom :</label>
-	<input type="text" id="nom" name="nom" required /><br><br>
-
-	<label for="email">Email :</label>
-	<input type="email" id="email" name="email" required /><br><br>
-
-	<label for="message">Message :</label><br>
-	<textarea id="message" name="message" rows="4" cols="50" required /><br><br>
-
-	<Button text="Envoyer" style="round" />
+	<slot />
 </form>
 
 <style>
-	form#light {
+	:global(form#light) {
 		background-color: #ffffff;
 		padding: 20px;
-		border-radius: 5px;
 		padding-right: 40px;
 	}
 
-	form#light label {
+	:global(form#light label) {
 		display: block;
 		margin-bottom: 10px;
 		font-weight: bold;
 		color: #555555;
 	}
 
-	form#light input[type="text"],
-	form#light input[type="email"],
-	form#light textarea {
+	:global(form#light input[type="text"]),
+	:global(form#light input[type="email"]),
+	:global(form#light input[type="tel"]),
+	:global(form#light textarea) {
 		width: 100%;
 		padding: 10px;
 		border: 1px solid #dddddd;
@@ -48,7 +39,7 @@
 		margin-bottom: 20px;
 	}
 
-	textarea {
+	:global(textarea) {
 		resize: vertical;
 	}
 
@@ -66,25 +57,21 @@
 		background: #0b4efd;
 	}
 
-	/* */
-
-	form#dark {
+	:global(form#dark) {
 		background-color: #333;
 		padding: 20px;
-		border-radius: 5px;
 		padding-right: 40px;
 	}
 
-	form#dark label {
+	:global(form#dark label) {
 		display: block;
 		margin-bottom: 10px;
 		font-weight: bold;
 		color: #ccc;
 	}
 
-	form#dark input[type="text"],
-	form#dark input[type="email"],
-	form#dark textarea {
+	:global(form#dark input),
+	:global(form#dark textarea) {
 		width: 100%;
 		padding: 10px;
 		border: 1px solid #dddddd;
@@ -92,10 +79,6 @@
 		font-size: 14px;
 		color: #555555;
 		margin-bottom: 20px;
-	}
-
-	textarea {
-		resize: vertical;
 	}
 
 	:global(form#dark button[type="submit"]) {
