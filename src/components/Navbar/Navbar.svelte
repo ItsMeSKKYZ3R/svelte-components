@@ -86,7 +86,6 @@
 
 	:global(#navbar) {
 		--navbar-height: 64px;
-		position: fixed;
 		height: var(--navbar-height);
 		background-color: var(--navbar-bg-color);
 		left: 0;

@@ -1,4 +1,4 @@
-# Svelte Components/Navbar.svelte (v1.0)
+# Svelte Components/Navbar.svelte (v1.1)
 ### Here is a presentation of the button and a preview.
 
 ```html
