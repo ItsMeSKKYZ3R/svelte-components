@@ -1,5 +1,5 @@
 # Svelte Components/Navbar.svelte (v1.1)
-### Here is a presentation of the button and a preview.
+### Here is a presentation of the navbar and a preview.
 
 ```html
 <script>
@@ -15,7 +15,7 @@
     <!-- Every new link needs to be in a li that contains a link to the page -->
 </Navbar>
 
-<!-- If you want to edit the style of the button like the background-color, you have to do it as global like it -->
+<!-- If you want to edit the style of the navbar like the background-color, you have to do it as global like it -->
 <style>
     :global(#navbar) {
         background-color: #000; /* Change the navbar's background color to black */
@@ -23,7 +23,7 @@
 </style>
 ```
 
-# Preview of the default button
+# Preview of the default navbar
 ### Normal
 ![Normal navbar without image]("../../../../../gitimgs/navbar.png) <br>
 ![Normal navbar with image]("../../../../../gitimgs/navbar-image.png) <br>
