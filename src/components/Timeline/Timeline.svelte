@@ -4,7 +4,7 @@
 	let lis: NodeListOf<Element>;
 
 	onMount(() => {
-		lis = document.querySelectorAll("ul li");
+		lis = document.querySelectorAll(".timeline ul li");
 
 		lis.forEach((element) => {
 			let childs = element.children;
@@ -20,9 +20,11 @@
 	});
 </script>
 
-<ul>
-	<slot />
-</ul>
+<div class="timeline">
+	<ul>
+		<slot />
+	</ul>
+</div>
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
