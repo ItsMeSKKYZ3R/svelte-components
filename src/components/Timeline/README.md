@@ -55,7 +55,7 @@
 </style>
 ```
 
-# Preview of the default button
+# Preview of the default timeline
 
 ### Normal
 
