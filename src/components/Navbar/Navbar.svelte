@@ -71,6 +71,10 @@
 </header>
 
 <style>
+	:global(#navbar) {
+		z-index: 999;
+	}
+
 	:global(:root) {
 		--navbar-bg-color: hsl(0, 0%, 15%);
 		--navbar-text-color: hsl(0, 0%, 85%);
