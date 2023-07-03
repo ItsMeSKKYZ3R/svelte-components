@@ -52,7 +52,7 @@
 		text-align: center;
 	}
 
-	:global(ul) {
+	:global(.timeline ul) {
 		--col-gap: 2rem;
 		--row-gap: 2rem;
 		--line-w: 0.25rem;
@@ -65,7 +65,7 @@
 	}
 
 	/* line */
-	:global(ul::before) {
+	:global(.timeline ul::before) {
 		content: "";
 		grid-column: 1;
 		grid-row: 1 / span 20;
@@ -76,12 +76,12 @@
 	/* columns*/
 
 	/* row gaps */
-	:global(ul li:not(:last-child)) {
+	:global(.timeline ul li:not(:last-child)) {
 		margin-bottom: var(--row-gap);
 	}
 
 	/* card */
-	:global(ul li) {
+	:global(.timeline ul li) {
 		grid-column: 2;
 		--inlineP: 1.5rem;
 		margin-inline: var(--inlineP);
@@ -91,7 +91,7 @@
 	}
 
 	/* date */
-	:global(ul li .date) {
+	:global(.timeline ul li .date) {
 		--dateH: 3rem;
 		height: var(--dateH);
 		margin-inline: calc(var(--inlineP) * -1);
@@ -125,7 +125,7 @@
 	}
 
 	/* circle */
-	:global(ul li .date::after) {
+	:global(.timeline ul li .date::after) {
 		content: "";
 		position: absolute;
 		width: 2rem;
@@ -140,19 +140,19 @@
 	}
 
 	/* title descr */
-	:global(ul li .title,
+	:global(.timeline ul li .title,
 	ul li .descr) {
 		background: var(--bgColor);
 		position: relative;
 		padding-inline: 1.5rem;
 	}
-	:global(ul li .title) {
+	:global(.timeline ul li .title) {
 		overflow: hidden;
 		padding-block-start: 1.5rem;
 		padding-block-end: 1rem;
 		font-weight: 500;
 	}
-	:global(ul li .descr) {
+	:global(.timeline ul li .descr) {
 		padding-block-end: 1.5rem;
 		font-weight: 300;
 	}
@@ -170,44 +170,44 @@
 		filter: blur(4px);
 		transform: translate(-50%, 50%);
 	}
-	:global(ul li .title::before) {
+	:global(.timeline ul li .title::before) {
 		bottom: calc(100% + 0.125rem);
 	}
 
-	:global(ul li .descr::before) {
+	:global(.timeline ul li .descr::before) {
 		z-index: -1;
 		bottom: 0.25rem;
 	}
 
 	@media (min-width: 40rem) {
-		:global(ul) {
+		:global(.timeline ul) {
 			grid-template-columns: 1fr var(--line-w) 1fr;
 		}
-		:global(ul::before) {
+		:global(.timeline ul::before) {
 			grid-column: 2;
 		}
-		:global(ul li:nth-child(odd)) {
+		:global(.timeline ul li:nth-child(odd)) {
 			grid-column: 1;
 		}
-		:global(ul li:nth-child(even)) {
+		:global(.timeline ul li:nth-child(even)) {
 			grid-column: 3;
 		}
 
 		/* start second card */
-		:global(ul li:nth-child(2)) {
+		:global(.timeline ul li:nth-child(2)) {
 			grid-row: 2/4;
 		}
 
-		:global(ul li:nth-child(odd) .date::before) {
+		:global(.timeline ul li:nth-child(odd) .date::before) {
 			clip-path: polygon(0 0, 100% 0, 100% 100%);
 			left: 0;
 		}
 
-		:global(ul li:nth-child(odd) .date::after) {
+		:global(.timeline ul li:nth-child(odd) .date::after) {
 			transform: translate(-50%, -50%);
 			left: calc(100% + var(--col-gap) + var(--line-w) / 2);
 		}
-		:global(ul li:nth-child(odd) .date) {
+		:global(.timeline ul li:nth-child(odd) .date) {
 			border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
 		}
 	}
